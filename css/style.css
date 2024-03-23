@@ -1,1 +1,105 @@
 @charset "utf-8";
+
+:root {
+  --primary-color: rgb(255, 154, 134);
+  --focus-color: rgb(255, 68, 0);
+  --font-lg: clamp(1.6rem, 4vw, 2rem);
+  --font-md: clamp(1.2rem, 3vw, 1.4rem);
+  --font-sm: clamp(0.9rem, 2vw, 1rem);
+}
+/* wrap 스타일링 */
+#wrap {
+  position: relative;
+  box-sizing: border-box;
+  width: 100%;
+  min-height: 100vh;
+  min-height: 100dvh;
+  padding-top: 7%;
+  background: rgb(255, 182, 167);
+  background: linear-gradient(
+    146deg,
+    rgba(255, 182, 167, 1) 0%,
+    rgba(255, 221, 192, 1) 37%,
+    rgba(255, 252, 198, 1) 87%
+  );
+}
+.wrap_in {
+  box-sizing: border-box;
+  width: 70vw;
+  max-width: 600px;
+  margin: 0 auto;
+  border-radius: 20px;
+  padding: 30px 20px;
+  background-color: #fff;
+  border: 2px solid var(--primary-color);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* 헤더 */
+.header {
+  margin-bottom: 40px;
+  text-align: center;
+}
+.header h1 {
+  font-size: var(--font-lg);
+  font-weight: 700;
+  color: var(--primary-color);
+  margin-bottom: 1rem;
+}
+.header > p {
+  font-size: var(--font-sm);
+  color: #333;
+}
+
+/* 입력 */
+.write{
+  margin-bottom: 20px;
+}
+#todo-form {
+  position: relative;
+  width: 100%;
+}
+#todo-write {
+  box-sizing: border-box;
+  width: 100%;
+  line-height: 30px;
+  padding: 0 40px 0 10px;
+  border-radius: 5px;
+  border: 2px solid var(--primary-color);
+}
+#todo-write:focus {
+  outline: none;
+  border-color: var(--focus-color);
+}
+.todo-submit {
+  position: absolute;
+  top: 5px;
+  right: 10px;
+  width: 40px;
+  height: 24px;
+  background-color: var(--primary-color);
+  color: #fff;
+  border-radius: 4px;
+  transition: 0.2s;
+  outline: none;
+  border: none;
+  cursor: pointer;
+}
+.todo-submit:hover {
+  background-color: var(--focus-color);
+}
+
+/* 리스트 */
+.list-ul {
+  box-sizing: border-box;
+  width: 100%;
+  padding: 0 20px;
+}
+.list-ul li{
+  display: flex;
+  padding: 10px 0;
+}
+.list-ul li.done {
+  text-decoration: line-through;
+  color: #aaa;
+}

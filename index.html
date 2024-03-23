@@ -1,12 +1,41 @@
 <!DOCTYPE html>
 <html lang="ko">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Todo-list</title>
-    <link rel="style-sheet" type="text/css" href="./css/style.css" >
-</head>
-<body>
-    
-</body>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./css/base.css" />
+    <link rel="stylesheet" href="./css/style.css" />
+  </head>
+  <body>
+    <div id="wrap">
+      <div class="wrap_in">
+        <header class="header">
+          <h1>🧡 Todo List 🧡</h1>
+          <p>오늘은 무엇을 해야할까?</p>
+        </header>
+        <section class="write">
+          <div class="write_in">
+            <form id="todo-form">
+              <input type="text" id="todo-write" placeholder="Write todo..." />
+              <button class="todo-submit" type="submit">Add</button>
+            </form>
+          </div>
+        </section>
+        <section class="list">
+          <div class="list_in">
+            <ul class="list-ul">
+            </ul>
+          </div>
+        </section>
+      </div>
+    </div>
+    <script src="./script/script.js"></script>
+  </body>
 </html>
